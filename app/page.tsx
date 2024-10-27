@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navigation from "./(components)/Navigation";
+import Headline from "./(components)/Headline";
 
 export default function Home() {
   return (
@@ -7,7 +8,9 @@ export default function Home() {
       <header>
         <Navigation />
       </header>
-      <main className="font-[family-name:var(--pt-sans)]"></main>
+      <main className="font-[family-name:var(--pt-sans)]">
+        <Headline text="create new post" />
+      </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
