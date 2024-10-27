@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Navigation from "./(components)/Navigation";
 import Headline from "./(components)/Headline";
 import PostMini from "./(components)/PostMini";
 
