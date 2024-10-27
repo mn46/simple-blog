@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PT_Sans } from "next/font/google";
 import "./globals.css";
+import Navigation from "./(components)/Navigation";
 
 const ptSans = PT_Sans({
   subsets: ["latin"],
@@ -21,7 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ptSans.variable} antialiased`}>{children}</body>
+      <body className={`${ptSans.variable} antialiased`}>
+        <header>
+          <Navigation />
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

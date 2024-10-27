@@ -6,9 +6,6 @@ import PostMini from "./(components)/PostMini";
 export default function Home() {
   return (
     <div>
-      <header>
-        <Navigation />
-      </header>
       <main className="font-[family-name:var(--pt-sans)]">
         <section id="create_new">
           <Headline text="create new post" />

@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
           </li>
         )}
         <li className="font-semibold text-lg">
-          <Link href="/post">create a new post</Link>
+          <Link href="/post/new">create a new post</Link>
         </li>
         <li className="font-semibold text-lg">
           <Link href="/">log in</Link>
