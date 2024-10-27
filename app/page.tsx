@@ -1,33 +1,11 @@
-"use client";
-
 import Image from "next/image";
-import Button from "./(components)/Button";
-import Link from "next/link";
+import Navigation from "./(components)/Navigation";
 
 export default function Home() {
   return (
     <div>
       <header>
-        <nav className="flex justify-end px-10 py-5">
-          <ul className="flex items-center gap-10">
-            <li className="font-semibold text-lg">
-              <Link href="/post">create a new post</Link>
-            </li>
-            <li className="font-semibold text-lg">
-              <Link href="/">log in</Link>
-            </li>
-            <li>
-              <Button
-                variant="primary"
-                onClick={() => {
-                  return;
-                }}
-              >
-                sign up
-              </Button>
-            </li>
-          </ul>
-        </nav>
+        <Navigation />
       </header>
       <main className="font-[family-name:var(--pt-sans)]"></main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
