@@ -1,6 +1,9 @@
 const page = ({ id }) => {
   return (
-    <article id={`post${id}`} className="flex flex-col gap-4 mt-10">
+    <article
+      id={`post${id}`}
+      className="flex flex-col gap-4 mt-10 mx-10 lg:mx-32 xl:mx-96"
+    >
       <div>
         <h3 className="text-2xl font-bold">Post title</h3>
         <h4 className="text-sm text-secondary">27/10/2024</h4>
