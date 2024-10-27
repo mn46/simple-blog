@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navigation from "./(components)/Navigation";
 import Headline from "./(components)/Headline";
+import PostMini from "./(components)/PostMini";
 
 export default function Home() {
   return (
@@ -9,7 +10,18 @@ export default function Home() {
         <Navigation />
       </header>
       <main className="font-[family-name:var(--pt-sans)]">
-        <Headline text="create new post" />
+        <section id="create_new">
+          <Headline text="create new post" />
+        </section>
+
+        <section id="all_posts">
+          <Headline text="all posts" />
+          <div className="mx-10 md:mx-32">
+            <PostMini />
+            <PostMini />
+            <PostMini />
+          </div>
+        </section>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
