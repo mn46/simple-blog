@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div>
       <main className="font-[family-name:var(--pt-sans)]">
-        <section id="create_new">
+        <section id="create_new" className="mx-10 lg:mx-32 xl:mx-96">
           <Headline text="create new post" />
         </section>
 
-        <section id="all_posts">
+        <section id="all_posts" className="mx-10 lg:mx-32 xl:mx-96">
           <Headline text="all posts" />
-          <div className="mx-10 md:mx-32">
+          <div>
             <PostMini />
             <PostMini />
             <PostMini />
