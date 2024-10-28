@@ -32,13 +32,13 @@ const Navigation: React.FC = () => {
             </button>
           </li>
         )}
-        <li className="font-semibold text-lg">
+        <li className="font-semibold text-lg hover:text-secondary transition-colors duration-200">
           <Link href="/">home</Link>
         </li>
-        <li className="font-semibold text-lg">
+        <li className="font-semibold text-lg hover:text-secondary transition-colors duration-200">
           <Link href="/post/new">create a new post</Link>
         </li>
-        <li className="font-semibold text-lg">
+        <li className="font-semibold text-lg hover:text-secondary transition-colors duration-200">
           <Link href="/">log in</Link>
         </li>
         <li>
