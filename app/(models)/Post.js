@@ -14,5 +14,5 @@ const PostSchema = new Schema(
 );
 
 // will grab an existing post or create a new one
-const Post = mongoose.models.post || mongoose.model("post", postSchema);
+const Post = mongoose.models.post || mongoose.model("post", PostSchema);
 export default Post;
