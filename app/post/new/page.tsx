@@ -1,7 +1,14 @@
+"use client";
+
 import Button from "@/app/(components)/Button";
 import Headline from "@/app/(components)/Headline";
+import { useRouter } from "next/navigation";
 
 const NewPost = () => {
+  const router = useRouter();
+  const handleCancel = () => {
+    router.push("/");
+  };
   return (
     <div className="mx-10 lg:mx-32 xl:mx-96">
       <Headline text="Create a new post" />
@@ -24,7 +31,9 @@ const NewPost = () => {
         </div>
 
         <div className="flex justify-between mt-10">
-          <Button variant="secondary">cancel</Button>
+          <Button variant="secondary" onClick={() => handleCancel()}>
+            cancel
+          </Button>
           <Button variant="primary" type="submit">
             save
           </Button>
