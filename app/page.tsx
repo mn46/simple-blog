@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Headline from "./(components)/Headline";
 import PostMini from "./(components)/PostMini";
+import { PostType } from "./types";
 
 const getPosts = async () => {
   const posts = await fetch("http://localhost:3000/api/posts", {
@@ -29,9 +30,9 @@ export default async function Home() {
         <section id="all_posts" className="mx-10 lg:mx-32 xl:mx-96">
           <Headline text="all posts" />
           <div>
-            <PostMini />
-            <PostMini />
-            <PostMini />
+            {posts?.map((post: PostType) => (
+              <PostMini key={post._id} postData={post} />
+            ))}
           </div>
         </section>
       </main>
