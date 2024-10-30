@@ -14,8 +14,6 @@ const NewPost = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log("event target", event.target.elements);
-
     const reqBody = {};
 
     Array.from(event.target.elements).forEach((element) => {

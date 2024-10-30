@@ -18,8 +18,6 @@ const getPosts = async () => {
 export default async function Home() {
   const { posts } = await getPosts();
 
-  console.log("posts", posts);
-
   return (
     <div>
       <main className="font-[family-name:var(--pt-sans)]">
