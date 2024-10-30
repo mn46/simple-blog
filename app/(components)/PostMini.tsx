@@ -23,7 +23,7 @@ const PostMini: React.FC<Props> = ({ postData }) => {
       </p>
       <Link
         href={`/post/1`}
-        className="bg-primary rounded-full px-5 py-2 uppercase text-white self-start"
+        className="bg-primary rounded-full px-5 py-2 uppercase text-white self-start hover:bg-secondary transition-colors duration-200"
       >
         read more
       </Link>
