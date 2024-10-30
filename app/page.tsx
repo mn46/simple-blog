@@ -2,7 +2,23 @@ import Image from "next/image";
 import Headline from "./(components)/Headline";
 import PostMini from "./(components)/PostMini";
 
-export default function Home() {
+const getPosts = async () => {
+  const posts = await fetch("http://localhost:3000/api/posts", {
+    cache: "no-store",
+  }).then((res) => res.json());
+
+  if (posts) {
+    return posts;
+  } else {
+    throw new Error("Failed to get the posts.");
+  }
+};
+
+export default async function Home() {
+  const { posts } = await getPosts();
+
+  console.log("posts", posts);
+
   return (
     <div>
       <main className="font-[family-name:var(--pt-sans)]">
