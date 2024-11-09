@@ -25,7 +25,7 @@ export default async function Home() {
           <Headline text="create new post" />
         </section>
 
-        <section id="all_posts" className="mx-10 lg:mx-32 xl:mx-96">
+        <section id="all_posts" className="mt-10 mx-10 lg:mx-32 xl:mx-96">
           <Headline text="all posts" />
           <div>
             {posts?.map((post: PostType) => (
