@@ -18,11 +18,7 @@ const Button: React.FC<Props> = ({
   return (
     <button
       type={type}
-      className={`${
-        variant === "primary"
-          ? "bg-primary text-white hover:bg-secondary transition-colors duration-200"
-          : "border-2 border-primary text-primary font-semibold"
-      } rounded-full px-5 py-2 uppercase`}
+      className={variant === "primary" ? "primary-btn" : "secondary-btn"}
       onClick={onClick}
     >
       {children}

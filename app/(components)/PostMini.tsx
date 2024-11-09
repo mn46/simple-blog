@@ -13,10 +13,7 @@ const PostMini: React.FC<Props> = ({ postData }) => {
         <h4 className="text-sm text-secondary">{postData.createdAt}</h4>
       </div>
       <p>{postData.content}</p>
-      <Link
-        href={`/post/1`}
-        className="bg-primary rounded-full px-5 py-2 uppercase text-white self-start hover:bg-secondary transition-colors duration-200"
-      >
+      <Link href={`/post/1`} className="primary-btn">
         read more
       </Link>
     </article>

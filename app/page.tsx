@@ -2,6 +2,8 @@ import Image from "next/image";
 import Headline from "./(components)/Headline";
 import PostMini from "./(components)/PostMini";
 import { PostType } from "./types";
+import Button from "./(components)/Button";
+import Link from "next/link";
 
 const getPosts = async () => {
   const posts = await fetch("http://localhost:3000/api/posts", {
@@ -23,6 +25,11 @@ export default async function Home() {
       <main className="font-[family-name:var(--pt-sans)]">
         <section id="create_new" className="mx-10 lg:mx-32 xl:mx-96">
           <Headline text="create new post" />
+          <div>
+            <Link href={`/post/new`} className="primary-btn">
+              create a new post
+            </Link>
+          </div>
         </section>
 
         <section id="all_posts" className="mt-10 mx-10 lg:mx-32 xl:mx-96">
