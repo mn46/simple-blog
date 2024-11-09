@@ -34,7 +34,7 @@ const Page = async ({ params }: Params) => {
           {parseDateString(singlePost.createdAt)}
         </h4>
       </div>
-      <p>{singlePost.content}</p>
+      <p className="whitespace-pre-line">{singlePost.content}</p>
     </article>
   );
 };
