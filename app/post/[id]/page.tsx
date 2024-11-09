@@ -3,8 +3,6 @@ import { PostType } from "@/app/types";
 const Page = async ({ params }) => {
   const { id } = await params;
 
-  console.log("id", id);
-
   const getPostById = async (id: string) => {
     try {
       const res = await fetch(`http://localhost:3000/api/posts/${id}`);
