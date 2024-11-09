@@ -23,7 +23,6 @@ export default async function Home() {
       <main className="font-[family-name:var(--pt-sans)] pb-14">
         <section id="create_new">
           <div className="py-20 mx-10 lg:mx-32 xl:mx-96">
-            {/* <Headline text="create new post" /> */}
             <h1 className="text-white font-bold text-6xl md:text-8xl text-center">
               Write it your way.
             </h1>
