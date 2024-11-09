@@ -5,6 +5,10 @@ import Headline from "@/app/(components)/Headline";
 import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 
+interface FormElements extends EventTarget {
+  elements: HTMLFormElement[];
+}
+
 const NewPost = () => {
   const router = useRouter();
   const handleCancel = () => {
@@ -14,9 +18,11 @@ const NewPost = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const reqBody = {};
+    const reqBody: { [key: string]: string } = {};
 
-    Array.from(event.target.elements).forEach((element) => {
+    const formElements = (event.target as FormElements).elements;
+
+    Array.from(formElements).forEach((element: HTMLFormElement) => {
       if (element.value === "") return;
       reqBody[element.name] = element.value;
     });
@@ -24,7 +30,7 @@ const NewPost = () => {
     const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify(reqBody),
-      "content-type": "application/json",
+      headers: { "content-type": "application/json" },
     });
 
     if (!res.ok) {
