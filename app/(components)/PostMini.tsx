@@ -12,7 +12,16 @@ const PostMini: React.FC<Props> = ({ postData }) => {
         <h3 className="text-2xl font-bold">{postData.title}</h3>
         <h4 className="text-sm text-secondary">{postData.createdAt}</h4>
       </div>
-      <p>{postData.content}</p>
+      <p
+        className="overflow-hidden text-ellipsis"
+        style={{
+          WebkitLineClamp: 3,
+          display: "-webkit-box",
+          WebkitBoxOrient: "vertical",
+        }}
+      >
+        {postData.content}
+      </p>
       <Link href={`/post/${postData._id}`} className="primary-btn">
         read more
       </Link>
