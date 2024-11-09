@@ -33,19 +33,25 @@ const Navigation: React.FC = () => {
           </li>
         )}
         <li className="font-semibold text-lg hover:text-secondary transition-colors duration-200">
-          <Link href="/">home</Link>
+          <Link href="/" onClick={() => setIsOpen(false)}>
+            home
+          </Link>
         </li>
         <li className="font-semibold text-lg hover:text-secondary transition-colors duration-200">
-          <Link href="/post/new">create a new post</Link>
+          <Link href="/post/new" onClick={() => setIsOpen(false)}>
+            create a new post
+          </Link>
         </li>
         <li className="font-semibold text-lg hover:text-secondary transition-colors duration-200">
-          <Link href="/">log in</Link>
+          <Link href="/" onClick={() => setIsOpen(false)}>
+            log in
+          </Link>
         </li>
         <li>
           <Button
             variant="primary"
             onClick={() => {
-              return;
+              setIsOpen(false);
             }}
           >
             sign up
