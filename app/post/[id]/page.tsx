@@ -1,19 +1,27 @@
 import { parseDateString } from "@/app/(helpers)/helpers";
 import { PostType } from "@/app/types";
 
-const Page = async ({ params }) => {
-  const { id } = await params;
+interface FetchedPost {
+  singlePost: PostType;
+}
+
+interface Params {
+  params: { id: string };
+}
+
+const Page = async ({ params }: Params) => {
+  const { id } = params;
 
   const getPostById = async (id: string) => {
     try {
       const res = await fetch(`http://localhost:3000/api/posts/${id}`);
       return res.json();
     } catch (error) {
-      throw new Error("Failed to get the post", error);
+      throw new Error("Failed to get the post", { cause: error });
     }
   };
 
-  const { singlePost } = await getPostById(id);
+  const { singlePost }: FetchedPost = await getPostById(id);
 
   return (
     <article
