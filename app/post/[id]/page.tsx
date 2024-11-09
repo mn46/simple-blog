@@ -1,24 +1,33 @@
-const page = ({ id }) => {
+import { PostType } from "@/app/types";
+
+const Page = async ({ params }) => {
+  const { id } = await params;
+
+  console.log("id", id);
+
+  const getPostById = async (id: string) => {
+    try {
+      const res = await fetch(`http://localhost:3000/api/posts/${id}`);
+      return res.json();
+    } catch (error) {
+      throw new Error("Failed to get the post", error);
+    }
+  };
+
+  const { singlePost } = await getPostById(id);
+
   return (
     <article
-      id={`post${id}`}
+      id={`post_${id}`}
       className="flex flex-col gap-4 mt-10 mx-10 lg:mx-32 xl:mx-96"
     >
       <div>
-        <h3 className="text-2xl font-bold">Post title</h3>
-        <h4 className="text-sm text-secondary">27/10/2024</h4>
+        <h3 className="text-2xl font-bold">{singlePost.title}</h3>
+        <h4 className="text-sm text-secondary">{singlePost.createdAt}</h4>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+      <p>{singlePost.content}</p>
     </article>
   );
 };
 
-export default page;
+export default Page;

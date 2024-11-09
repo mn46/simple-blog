@@ -13,7 +13,7 @@ const PostMini: React.FC<Props> = ({ postData }) => {
         <h4 className="text-sm text-secondary">{postData.createdAt}</h4>
       </div>
       <p>{postData.content}</p>
-      <Link href={`/post/1`} className="primary-btn">
+      <Link href={`/post/${postData._id}`} className="primary-btn">
         read more
       </Link>
     </article>
