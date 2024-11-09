@@ -21,12 +21,20 @@ export default async function Home() {
   return (
     <div>
       <main className="font-[family-name:var(--pt-sans)] pb-14">
-        <section id="create_new" className="mx-10 lg:mx-32 xl:mx-96">
-          <Headline text="create new post" />
-          <div className="mt-10 p-8 flex items-center justify-center bg-secondary bg-opacity-25 rounded-lg border-2 border-primary border-dashed">
-            <Link href={`/post/new`} className="primary-btn">
-              create a new post
-            </Link>
+        <section id="create_new">
+          <div className="py-20 mx-10 lg:mx-32 xl:mx-96">
+            {/* <Headline text="create new post" /> */}
+            <h1 className="text-white font-bold text-6xl md:text-8xl text-center">
+              Write it your way.
+            </h1>
+            <div className="mt-10 p-8 flex items-center justify-center">
+              <Link
+                href={`/post/new`}
+                className="primary-btn !bg-white !text-secondary font-bold"
+              >
+                create a new post
+              </Link>
+            </div>
           </div>
         </section>
 

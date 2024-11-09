@@ -11,3 +11,10 @@
     @apply border-2 border-primary text-primary font-semibold rounded-full px-5 py-2 uppercase hover:bg-secondary hover:bg-opacity-50 transition-colors duration-200;
   }
 }
+
+#create_new {
+  background-image: url("./olha-zaika-forest-road.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
