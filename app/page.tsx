@@ -32,7 +32,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <section id="all_posts" className="mt-10 mx-10 lg:mx-32 xl:mx-96">
+        <section id="all_posts" className="mt-16 mx-10 lg:mx-32 xl:mx-96">
           <Headline text="all posts" />
           <div>
             {posts?.map((post: PostType) => (
