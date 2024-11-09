@@ -10,7 +10,7 @@ interface Params {
 }
 
 const Page = async ({ params }: Params) => {
-  const { id } = params;
+  const { id } = await params;
 
   const getPostById = async (id: string) => {
     try {
