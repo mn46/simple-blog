@@ -48,7 +48,7 @@ const NewPost = () => {
             name="title"
             type="text"
             required
-            className="border border-primary rounded-xl"
+            className="border border-primary rounded-xl p-4"
           />
         </div>
 
@@ -58,7 +58,7 @@ const NewPost = () => {
             id="content"
             name="content"
             required
-            className="border border-primary rounded-xl h-[50vh]"
+            className="border border-primary rounded-xl h-[50vh] p-4"
           />
         </div>
 
