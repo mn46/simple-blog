@@ -4,14 +4,13 @@ import { PostType } from "./types";
 import Link from "next/link";
 
 const getPosts = async () => {
-  const posts = await fetch("http://localhost:3000/api/posts", {
-    cache: "no-store",
-  }).then((res) => res.json());
-
-  if (posts) {
+  try {
+    const posts = await fetch("http://localhost:3000/api/posts", {
+      cache: "no-store",
+    }).then((res) => res.json());
     return posts;
-  } else {
-    throw new Error("Failed to get the posts.");
+  } catch (error) {
+    throw new Error("Failed to get the posts.", { cause: error });
   }
 };
 
