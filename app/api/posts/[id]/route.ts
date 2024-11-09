@@ -1,7 +1,13 @@
 import Post from "@/app/(models)/Post";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req, { params }) {
+interface Params {
+  params: {
+    id: string;
+  };
+}
+
+export async function GET(req: NextRequest, { params }: Params) {
   try {
     const { id } = params;
     const singlePost = await Post.findOne({ _id: id });
