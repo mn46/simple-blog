@@ -1,3 +1,4 @@
+import { parseDateString } from "@/app/(helpers)/helpers";
 import { PostType } from "@/app/types";
 
 const Page = async ({ params }) => {
@@ -21,7 +22,9 @@ const Page = async ({ params }) => {
     >
       <div>
         <h3 className="text-2xl font-bold">{singlePost.title}</h3>
-        <h4 className="text-sm text-secondary">{singlePost.createdAt}</h4>
+        <h4 className="text-sm text-secondary">
+          {parseDateString(singlePost.createdAt)}
+        </h4>
       </div>
       <p>{singlePost.content}</p>
     </article>
