@@ -1,8 +1,6 @@
-import Image from "next/image";
 import Headline from "./(components)/Headline";
 import PostMini from "./(components)/PostMini";
 import { PostType } from "./types";
-import Button from "./(components)/Button";
 import Link from "next/link";
 
 const getPosts = async () => {
