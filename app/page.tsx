@@ -25,7 +25,7 @@ export default async function Home() {
       <main className="font-[family-name:var(--pt-sans)]">
         <section id="create_new" className="mx-10 lg:mx-32 xl:mx-96">
           <Headline text="create new post" />
-          <div>
+          <div className="mt-10 p-8 flex items-center justify-center bg-secondary bg-opacity-25 rounded-lg border-2 border-primary border-dashed">
             <Link href={`/post/new`} className="primary-btn">
               create a new post
             </Link>
