@@ -5,7 +5,7 @@ type Params = {
   params: Promise<{ id: string }>;
 };
 
-export async function GET(req: NextRequest, { params }: { params: Params }) {
+export async function GET(req: NextRequest, { params }: Params) {
   try {
     const { id } = params;
     const singlePost = await Post.findOne({ _id: id });
