@@ -6,10 +6,11 @@ interface FetchedPost {
 }
 
 interface Params {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 const Page = async ({ params }: Params) => {
+  console.log("params", params);
   const { id } = await params;
 
   const getPostById = async (id: string) => {
