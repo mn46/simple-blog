@@ -1,10 +1,11 @@
 import Post from "@/app/(models)/Post";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+type Params = {
+  params: Promise<{ id: string }>;
+};
+
+export async function GET(req: NextRequest, { params }: { params: Params }) {
   try {
     const { id } = params;
     const singlePost = await Post.findOne({ _id: id });
