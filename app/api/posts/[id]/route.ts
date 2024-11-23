@@ -1,10 +1,6 @@
 import Post from "@/app/(models)/Post";
 import { NextRequest, NextResponse } from "next/server";
 
-// type Params = {
-//   params: { id: string };
-// };
-
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
