@@ -3,7 +3,10 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 mongoose.Promise = global.Promise;
 
 const PostSchema = new Schema(
